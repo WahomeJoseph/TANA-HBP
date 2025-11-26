@@ -12,6 +12,7 @@ public class Main {
         int years = 0;
         int numberOfPayments = 0;
 //Inc, current, both,
+//        scanner SIN
         Scanner scanner = new Scanner(System.in);
 
 //        user inputs
