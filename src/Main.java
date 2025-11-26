@@ -12,6 +12,7 @@ public class Main {
         int years = 0;
         int numberOfPayments = 0;
 //Inc, current, both,
+//        scanner SIN
         Scanner scanner = new Scanner(System.in);
 
 //        user inputs
@@ -33,6 +34,7 @@ public class Main {
                 break;
             }
             System.out.println("Enter a value between 1 and 30");
+//            System.out.println();
         }
 
         while (true) {
