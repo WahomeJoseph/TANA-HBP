@@ -6,24 +6,45 @@ public class Main {
 //        variables and constants
         final byte percent = 100;
         final byte months = 12;
+        int principal = 0;
+        double annualInterestRate = 0;
+        double monthlyInterestRate = 0;
+        int years = 0;
+        int numberOfPayments = 0;
 
         Scanner scanner = new Scanner(System.in);
 
 //        user inputs
-        System.out.print("Enter the principal: ");
-        int principal = scanner.nextInt();
+        while (true) {
+            System.out.print("Enter the principal: ");
+            principal = scanner.nextInt();
 
-        System.out.print("Enter the annual interest rate: ");
-        double annualInterestRate = scanner.nextDouble();
-        double monthlyInterestRate = annualInterestRate / percent / months;
+            if (principal >= 1000 && principal <= 1_000_000)
+                break;
+            System.out.println("Enter a value between 1000 and 1000000");
+        };
 
-        System.out.print("Enter the period in years: ");
-        int years = scanner.nextInt();
-        int numberOfPayments = years * months;
+        while (true) {
+            System.out.print("Enter the annual interest rate: ");
+            annualInterestRate = scanner.nextDouble();
+            if (annualInterestRate >= 1 && annualInterestRate <= 30) {
+            monthlyInterestRate = annualInterestRate / percent / months;
+                break;
+            }
+            System.out.println("Enter a value between 1 and 30");
+        }
+
+        while (true) {
+            System.out.print("Enter the period in years: ");
+            years = scanner.nextInt();
+            if (years >= 1 && years <= 30) {
+                numberOfPayments = years * months;
+                break;
+            }
+            System.out.println("Enter a value between 1 and 30");
+        }
 
 //        calculations
-        ;
-
         double totalMortgage = principal
                 * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)
                 / (Math.pow(1+ monthlyInterestRate, numberOfPayments) - 1));
