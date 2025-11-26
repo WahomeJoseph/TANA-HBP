@@ -33,6 +33,7 @@ public class Main {
                 break;
             }
             System.out.println("Enter a value between 1 and 30");
+//            System.out.println();
         }
 
         while (true) {
