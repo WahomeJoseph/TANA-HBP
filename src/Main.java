@@ -11,7 +11,7 @@ public class Main {
         double monthlyInterestRate = 0;
         int years = 0;
         int numberOfPayments = 0;
-
+//Inc, current, both,
         Scanner scanner = new Scanner(System.in);
 
 //        user inputs
